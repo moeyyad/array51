@@ -6,6 +6,6 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://moeyyad.github.io",
-  base: "courses",
+  base: "prosper",
   integrations: [tailwind(), mdx(), sitemap()],
 });
