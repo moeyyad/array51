@@ -1,6 +1,6 @@
 ---
 import { Picture } from "astro:assets";
-import learningImage from "assets/learning.svg";
+import landingGraphic from "assets/learning.svg";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 ---
@@ -9,10 +9,10 @@ import { Icon } from "astro-icon";
   class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
   <div class="py-6 md:order-1 hidden md:block">
     <Picture
-      src={learningImage}
+      src={landingGraphic}
       alt="Learning Graphic"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 800px) 100vw, 620px"
+      width=480
+      height=480
       loading="eager"
       format="avif"
     />
@@ -23,8 +23,8 @@ import { Icon } from "astro-icon";
       Add data science to your programs
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      We design data science courses and programs for private career colleges, bootcamps,
-      and workplace L&amp;D. Including all the latest advancements in AI technology.
+      We design data science courses for private career colleges and coding bootcamps.
+      We cover everything from the basics to all the latest advancements in AI technology.
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
@@ -34,13 +34,13 @@ import { Icon } from "astro-icon";
         class="flex gap-1 items-center justify-center"
         rel="noopener">
         <Icon class="text-white w-5 h-5" name="bx:bxs-chevron-right" />
-        See Courses & Programs
+        See Programs & Courses
       </Link>
       <Link
         size="lg"
         style="outline"
         rel="noopener"
-        href="https://github.com/surjithctly/astroship"
+        href="/courses/contact"
         class="flex gap-1 items-center justify-center"
         target="_blank">
         <Icon class="text-black w-4 h-4" name="bx:bxs-envelope" />
