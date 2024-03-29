@@ -4,9 +4,14 @@ import Cta from "@components/cta.astro";
 import Features from "@components/features.astro";
 import Hero from "@components/hero.astro";
 import Layout from "@layouts/Layout.astro";
+
+const attribution = {
+  href: 'https://www.freepik.com/',
+  linkText: 'Image by vectorjuice on Freepik'
+}
 ---
 
-<Layout title="">
+<Layout title="" attribution={attribution}>
   <Container>
     <Hero />
     <Features />

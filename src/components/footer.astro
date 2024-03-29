@@ -1,3 +1,6 @@
+---
+const { attribution } = Astro.props;
+---
 <footer class="my-20">
   <p class="text-center text-sm text-slate-500">
     © {new Date().getFullYear()} Prosper Labs
@@ -15,10 +18,13 @@
       class="hover:underline">
       Web3Templates
     </a>
-    |
-    <a 
-      href="https://www.freepik.com">
-      Image by vectorjuice
-    </a> on Freepik
+    {
+      attribution && (
+        <span> | </span>
+        <a href={attribution.href}>
+          {attribution.linkText}
+        </a>
+      )
+    }
   </p>
 </footer>
