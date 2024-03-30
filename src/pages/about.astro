@@ -1,0 +1,43 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+---
+
+<Layout title="About">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">About Us</Fragment>
+      <Fragment slot="desc">We are here to help you provide quality data science education</Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Backed by Experience
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Our team brings together expertise in data science education and Ontario ministry compliance and approval. Between our experts, 
+        we have started, ran, and grown multiple educational organizations and training businesses.
+      </p>
+      <p class="text-lg leading-relaxed text-slate-500">
+        We know what it's like to provide quality education, and we are here to help
+        you do the same.
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Why We Do This
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Our mission is to improve the availability and quality of data science education in Ontario and the rest of Canada.
+        This is becoming increasingly important alongside recent advancements in artificial intelligence.
+      </p>
+      <p class="text-lg leading-relaxed text-slate-500">
+        We believe that the best way to do this is to help private career colleges (PCCs) and coding bootcamps
+        offer high quality and up-to-date education on skills that are rapidly becoming more important for the future. 
+      </p>
+    </div>
+
+  </Container>
+</Layout>
