@@ -4,18 +4,18 @@ import { z, defineCollection } from 'astro:content';
 // 2. Define your collection(s)
 
 const courseCollection = defineCollection({
+  type: 'content',
   schema: z.object({
-    draft: z.boolean(),
+    program: z.string().optional(),
+    courseCode: z.string(),
     title: z.string(),
-    snippet: z.string(),
-    image: z.object({
-      src: z.string(),
-      alt: z.string(),
-    }),
-    publishDate: z.string().transform(str => new Date(str)),
-    author: z.string().default('Astroship'),
-    category: z.string(),
-    tags: z.array(z.string()),
+    description: z.string(),
+    prerequisites: z.array(z.string()).optional(),
+    corequisites: z.array(z.string()).optional(),
+    courseHours: z.number().optional(),
+    courseType: z.string().optional(),
+    deliveryMode: z.array(z.string()).optional(),
+    sortOrder: z.number()
   }),
 });
 

@@ -10,7 +10,7 @@ const { attribution } = Astro.props;
     Please keep this backlink on your website if possible.
     or Purchase a commercial license from https://web3templates.com
   -->
-  <p class="text-center text-xs text-slate-500 mt-1">
+  <p class="text-center text-xs text-slate-200 mt-1">
     Made by <a
       href="https://web3templates.com"
       target="_blank"
@@ -18,13 +18,10 @@ const { attribution } = Astro.props;
       class="hover:underline">
       Web3Templates
     </a>
-    {
-      attribution && (
-        <span> | </span>
-        <a href={attribution.href}>
-          {attribution.linkText}
-        </a>
-      )
-    }
+  </p>
+  <p class="text-center text-xs text-white mt-1">
+    <a href="https://www.freepik.com/">
+      Image by vectorjuice on Freepik
+    </a>
   </p>
 </footer>

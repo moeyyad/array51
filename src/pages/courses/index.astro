@@ -5,14 +5,11 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 
-// Filter blog entries with 'draft: false' & date before current date
-const publishedBlogEntries = await getCollection("courses", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
-});
+const courseList = await getCollection("courses");
 
 // Sort content entries by publication date
-publishedBlogEntries.sort(function (a, b) {
-  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+courseList.sort(function (a, b) {
+  return a.data.sortOrder - b.data.sortOrder
 });
 ---
 
@@ -21,24 +18,27 @@ publishedBlogEntries.sort(function (a, b) {
     <Sectionhead>
       <Fragment slot="title">Courses</Fragment>
       <Fragment slot="desc">
-        We cover everything from the basics to the latest developments in AI
+        Everything from the basics to the latest developments in AI
       </Fragment>
     </Sectionhead>
     <main class="mt-16">
       <ul class="grid gap-4 max-w-4xl mx-auto">
         {
-          publishedBlogEntries.map((blogPostEntry, index) => (
+          courseList.map((blogPostEntry, index) => (
             <li>
               <a href={`/array51/courses/${blogPostEntry.slug}`}>
                 <div class="grid gap-5 md:gap-10 items-center border border-gray-300 rounded p-4">
                   <div>
                     <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-                      {blogPostEntry.data.category}
+                      {blogPostEntry.data.courseCode}
                     </span>
 
                     <h2 class="text-xl font-semibold leading-snug tracking-tight mt-1 ">
                       {blogPostEntry.data.title}
                     </h2>
+                    <p>
+                      {blogPostEntry.data.prerequisites}    
+                    </p>
                   </div>
                 </div>
               </a>
