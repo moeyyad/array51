@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import { Picture } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
@@ -23,26 +22,39 @@ courseList.sort(function (a, b) {
     </Sectionhead>
     <main class="mt-16">
       <p class="text-lg max-w-4xl mx-auto leading-relaxed text-slate-500 mb-8">
-        Unless otherwise noted all courses are designed for traditional lecture based delivery over a period of 40 instructional hours. Every course can be delivered
+        Unless otherwise noted all courses are designed to be delivered by lectures over a period of 40 instructional hours. Every course can be delivered
         in person, online, or through blended learning.
       </p>
       <ul class="grid gap-4 max-w-4xl mx-auto">
         {
-          courseList.map((blogPostEntry, index) => (
+          courseList.map((course, index) => (
             <li>
-              <a href={`/array51/courses/${blogPostEntry.slug}`}>
+              <a href={`/array51/courses/${course.slug}`}>
                 <div class="grid gap-5 md:gap-10 items-center border border-gray-300 rounded p-4">
                   <div>
                     <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-                      {blogPostEntry.data.courseCode}
+                      {course.data.courseCode}
                     </span>
 
                     <h2 class="text-xl font-semibold leading-snug tracking-tight mt-1 ">
-                      {blogPostEntry.data.title}
+                      {course.data.title}
                     </h2>
-                    <p>
-                      {blogPostEntry.data.prerequisites}    
+
+                    <p class="text-md text-slate-800 my-4">
+                      {course.data.description}
                     </p>
+
+                    {course.data.prerequisites && (
+                      <p class="italic text-sm text-slate-600">
+                        Prereq: {course.data.prerequisites.join(", ")}
+                      </p>
+                    )}
+
+                    {course.data.corequisites && (
+                      <p class="italic text-sm text-slate-600">
+                        Coreq: {course.data.corequisites.join(", ")}
+                      </p>
+                    )}
                   </div>
                 </div>
               </a>
