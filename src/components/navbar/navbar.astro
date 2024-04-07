@@ -7,11 +7,7 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 const menuitems = [
   {
     title: "Programs",
-    path: "#",
-    children: [
-      { title: "Data Analytics", path: "/array51/programs#data-analytics" },
-      { title: "Data Science", path: "/array51/programs#data-science" },
-    ],
+    path: "/array51/programs",
   },
   {
     title: "Courses",
@@ -40,26 +36,14 @@ const menuitems = [
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
-            menuitems.map((item, index) => (
-              <>
-                {item.children && (
-                  <Dropdown
-                    title={item.title}
-                    children={item.children}
-                    lastItem={index === menuitems.length - 1}
-                  />
-                )}
-
-                {!item.children && (
-                  <li>
-                    <a
-                      href={item.path}
-                      class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
-                      <span> {item.title}</span>
-                    </a>
-                  </li>
-                )}
-              </>
+            menuitems.map((item) => (
+              <li>
+                <a
+                  href={item.path}
+                  class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+                  <span> {item.title}</span>
+                </a>
+              </li>
             ))
           }
           <li class="lg:hidden">

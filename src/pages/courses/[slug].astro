@@ -5,8 +5,8 @@ import Container from "@components/container.astro";
 
 // Generate a new path for every collection entry
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("courses");
-  return blogEntries.map((entry) => ({
+  const courses = await getCollection("courses");
+  return courses.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
   }));
@@ -21,14 +21,39 @@ const { Content } = await entry.render();
   <Container>
     <div class="mx-auto max-w-3xl mt-14">
       <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-        {entry.data.program}
+        {entry.data.courseCode}
       </span>
       <h1
-        class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
+        class="text-xl lg:text-2xl font-bold lg:tracking-tight mt-1 mb-4 lg:leading-tight">
         {entry.data.title}
       </h1>
+      <div class="max-w-screen-sm text-sm text-slate-600">
+        <table class="w-full">
+          <tr>
+            <td class="p-1">Pre-requisites</td>
+            <td class="p-1">{(entry.data.prerequisites && entry.data.prerequisites.join(", ")) || "None"}</td>
+          </tr>
+          <tr>
+            <td class="p-1">Co-requisites</td>
+            <td class="p-1">{(entry.data.corequisites && entry.data.corequisites.join(", ")) || "None"}</td>
+          </tr>
+          <tr>
+            <td class="p-1">Instructional Hours</td>
+            <td class="p-1">{entry.data.courseHours || 40}</td>
+          </tr>
+          <tr>
+            <td class="p-1">Instructional Mode</td>
+            <td class="p-1">{entry.data.courseType || "Lecture"}</td>
+          </tr>
+          <tr>
+            <td class="p-1">Delivery Mode</td>
+            <td class="p-1">{(entry.data.deliveryMode && entry.data.deliveryMode.join(" / ")) || "In-Person"}</td>
+          </tr>
+        </table>
+      </div>
+      
+      <!-- 
       <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap">
-        <!-- 
         <span class="text-gray-400">
           {entry.data.author}
         </span>
@@ -46,17 +71,17 @@ const { Content } = await entry.render();
             ))
           }
         </div>
-        -->
       </div>
+      -->
     </div>
 
-    <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
+    <div class="mx-auto prose prose-sm mt-6 max-w-3xl">
       <Content />
     </div>
-    <div class="text-center mt-8">
+    <div class="text-center mt-14">
       <a
         href="/array51/courses"
-        class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
+        class="bg-gray-100 px-5 py-3 rounded-sm hover:bg-gray-200 transition"
         >← All Courses</a
       >
     </div>
