@@ -21,35 +21,35 @@ const menuitems = [
 ---
 
 <Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+  <header class="flex flex-col md:flex-row justify-between items-center my-5">
     <Astronav>
-      <div class="flex w-full lg:w-auto items-center justify-between">
+      <div class="flex w-full md:w-auto items-center justify-between">
         <a href="/array51" class="text-lg"
           ><span class="font-bold text-slate-800">🚀 Array51</span><span
             class="text-slate-500"> Labs</span
           >
         </a>
-        <div class="block lg:hidden">
+        <div class="block md:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
         </div>
       </div>
-      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-        <ul class="flex flex-col lg:flex-row lg:gap-3">
+      <MenuItems class="hidden w-full md:w-auto mt-2 md:flex md:mt-0">
+        <ul class="flex flex-col md:flex-row md:gap-3">
           {
             menuitems.map((item) => (
               <li>
                 <a
                   href={item.path}
-                  class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+                  class="flex md:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
                   <span> {item.title}</span>
                 </a>
               </li>
             ))
           }
-          <li class="lg:hidden">
+          <li class="md:hidden">
             <a
               href="/array51/contact"
-              class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+              class="flex md:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
               Contact
               {
                 <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">
@@ -62,7 +62,7 @@ const menuitems = [
       </MenuItems>
     </Astronav>
     <div>
-      <div class="hidden lg:flex items-center gap-4">
+      <div class="hidden md:flex items-center gap-4">
         <Link href="/array51/contact" size="md">Contact Us</Link>
       </div>
     </div>
