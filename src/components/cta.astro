@@ -1,14 +1,16 @@
 ---
 import Link from "./ui/link.astro";
+
+const { title, subtitle } = Astro.props;
 ---
 
 <div
   class="bg-black p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center">
   <h2 class="text-white text-4xl md:text-6xl tracking-tight">
-    Grow your business.
+    {title}
   </h2>
   <p class="text-slate-400 mt-4 text-lg md:text-xl">
-    Add highly in-demand data science programs to your business to attract more students
+    {subtitle}
   </p>
   <div class="flex mt-5">
     <Link href="/array51/contact" style="inverted">Contact Us</Link>

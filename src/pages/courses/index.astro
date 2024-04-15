@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import Cta from "@components/cta.astro";
 
 const courseList = await getCollection("courses");
 
@@ -63,5 +64,6 @@ courseList.sort(function (a, b) {
         }
       </ul>
     </main>
+    <Cta title="Grow your business." subtitle="Contact us to order a program or course for your education business"/>
   </Container>
 </Layout>
