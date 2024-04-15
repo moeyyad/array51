@@ -13,40 +13,22 @@ import { Icon } from "astro-icon";
       <Fragment slot="desc">We're excited to work with you</Fragment>
     </Sectionhead>
 
-    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+    <div class="mx-auto max-w-xl mt-16">
       <div>
-        <h2 class="font-medium text-2xl text-gray-800">Get In Touch</h2>
+        <h2 class="font-medium text-2xl text-gray-800">Schedule Meeting</h2>
         <p class="text-lg leading-relaxed text-slate-500 mt-3">
-          
-          Send us a message using the form, or directly schedule an introductory meeting
+          Schedule an introductory phone meeting or send us a message using the form below
         </p>
-        <div class="mt-5">
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>800 Queenston Road, Stoney Creek, ON</span>
-          </div>
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>23 Westmore Drive, Etobicoke, ON</span>
-          </div>
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" />
-            <a
-              href="mailto:moeyyadqureshi@gmail.com"
-              >moeyyadqureshi@gmail.com</a
-            >
-          </div>
-          <div>
-            <button class="items-center mt-8 space-x-2 bg-white border border-blue-500 text-blue-500 px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white">
-              <a href="https://calendly.com/moeyyadqureshi/discovery-session" target="_blank">
-                Schedule Meeting
-              </a>
-            </button>
-          </div>
+        <div>
+          <button class="items-center mt-3 space-x-2 w-full bg-white border border-blue-500 text-blue-500 py-2.5 lg:py-3 rounded-md hover:bg-blue-500 hover:text-white">
+            <a href="https://calendly.com/moeyyadqureshi/discovery-session" target="_blank">
+              Schedule Meeting
+            </a>
+          </button>
         </div>
       </div>
       <div>
-        <h2 class="font-medium text-2xl text-gray-800 mb-4">Send Us A Message</h2>
+        <h2 class="font-medium text-2xl text-gray-800 mt-8 mb-3">Send Us A Message</h2>
         <Contactform />
       </div>
     </div>
