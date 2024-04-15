@@ -3,6 +3,8 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 import Cta from "@components/cta.astro";
+
+import '@fontsource-variable/spline-sans-mono';
 ---
 
 <Layout title="Programs">
@@ -12,7 +14,7 @@ import Cta from "@components/cta.astro";
       <Fragment slot="desc">Our flagship programs are designed for the latest technologies</Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 mb-12">
       <p class="text-lg leading-relaxed text-slate-500">
         Student interest has recently skyrocketed in data science and artificial intelligence.
         Our programs let you meet these demands through providing comprehensive training with all the
@@ -20,63 +22,72 @@ import Cta from "@components/cta.astro";
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 mx-auto max-w-4xl mt-12 gap-16">
+    <div class="mx-auto max-w-4xl gap-16">
       <div id="data-analytics">
         <h1 class="font-bold text-4xl text-gray-800">
           Data Analytics
         </h1>
-        <h2 class="text-lg leading-relaxed text-slate-500">
+        <h2 class="text-lg leading-relaxed text-slate-500 mt-2">
           10 Courses | 8 Months
         </h2>
-        <p class="text-lg leading-relaxed text-slate-500">
-          Insert Program Description Here
+        <p class="text-md leading-relaxed text-slate-500 mt-3">
+          This program will prepare students for success in the rapidly growing field of data analytics,
+          focusing on the skills that will make them fully career-ready. Over two academic terms, students
+          will learn how to perform ad-hoc data analysis using Python and SQL, use statistics to 
+          derive new business insights, communicate and present their findings, and approach problems
+          from a business intelligence perspective in order to guide business decisions.
+
+
+
         </p>
-        <h3>Semester 1</h3>
-        <ul class="list-disc">
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
+        <h3 class="text-md font-bold mt-8 mb-3">Semester 1</h3>
+        <ul class="space-y-2 md:space-y-0">
+          <a href="/array51/courses/da100">[DA100] Foundations of Business Analytics</a>
+          <a href="/array51/courses/da110">[DA110] Intoduction to Programming with Python</a>
+          <a href="/array51/courses/da111">[DA111] Introduction to Database Programming with SQL</a>
+          <a href="/array51/courses/da120">[DA120] Discrete Mathematics for Programming</a>
+          <a href="/array51/courses/da190">[DA190] Communication Skills for Data Analysts</a>
         </ul>
-        <h3>Semester 2</h3>
-        <ul class="list-disc">
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
+        <h3 class="text-md font-bold mt-8 mb-3">Semester 2</h3>
+        <ul class="space-y-2 md:space-y-0">
+          <a href="/array51/courses/da200">[DA200] Advanced Business Intelligence Analytics</a>
+          <a href="/array51/courses/da210">[DA210] Introduction to Data Analysis with Python</a>
+          <a href="/array51/courses/da220">[DA220] Data Structures and Algorithms</a>
+          <a href="/array51/courses/da221">[DA221] Probability and Statistics for Data Analytics</a>
+          <a href="/array51/courses/da290">[DA290] Data Visualization and Storytelling</a>
         </ul>
       </div>
 
-      <div id="data-science">
+      <div id="data-science" class="mt-12">
         <h1 class="font-bold text-4xl text-gray-800">
           Data Science
         </h1>
-        <h2 class="text-lg leading-relaxed text-slate-500">
+        <h2 class="text-lg leading-relaxed text-slate-500 mt-2">
           15 Courses | 12 Months
         </h2>
-        <p class="text-lg leading-relaxed text-slate-500">
-          Insert Program Description Here
+        <p class="text-md leading-relaxed text-slate-500 mt-3 mb-8">
+          This program extends the Data Analytics program by one semester to teach additional skills
+          such as machine learning and artificial intelligence. Students will come out of this program with
+          a more versatile and robust skill set that allows them to approach and solve complex problems across different
+          business domains.
         </p>
-        <h3>Semester 1</h3>
-        <ul class="list-disc">
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-        </ul>
-        <h3>Semester 2</h3>
-        <ul class="list-disc">
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
-          <li><a href="/array51/courses/da100">DA100 Foundations of Business Analytics</a></li>
+        <h3 class="text-md font-bold mt-8 mb-3">Semester 3</h3>
+        <ul class="space-y-2 md:space-y-0">
+          <a href="/array51/courses/ds310">[DS310] Introduction to Machine Learning with Python</a>
+          <a href="/array51/courses/ds311">[DS311] Introduction to Deep Learning with Python</a>
+          <a href="/array51/courses/ds312">[DS312] Prompt Engineering for LLMs</a>
+          <a href="/array51/courses/ds320">[DS320] Mathematics for Machine Learning</a>
+          <a href="/array51/courses/ds390">[DS390] AI Safety and Ethics</a>
         </ul>
       </div>
     </div>
     <Cta title="Grow your business." subtitle="Contact us to order a program or course for your education business"/>
   </Container>
 </Layout>
+<style>
+  a {
+    display: block;
+    color: #3b82f6;
+    font-family: 'Spline Sans Mono Variable', monospace;
+  }
+</style>

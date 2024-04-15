@@ -17,6 +17,9 @@ dependencies:
   '@fontsource-variable/inter':
     specifier: ^5.0.15
     version: 5.0.17
+  '@fontsource-variable/spline-sans-mono':
+    specifier: ^5.0.20
+    version: 5.0.20
   '@tailwindcss/typography':
     specifier: ^0.5.10
     version: 0.5.11(tailwindcss@3.4.1)
@@ -864,6 +867,10 @@ packages:
 
   /@fontsource-variable/inter@5.0.17:
     resolution: {integrity: sha512-sa80nNnqF8kzhBvqusWiL9vlPMVpdmOwMmDBup46Jggsr1VBqo+YuzwB36Ls+X6uHJtb8Yv3ALBHL/zGmT862A==}
+    dev: false
+
+  /@fontsource-variable/spline-sans-mono@5.0.20:
+    resolution: {integrity: sha512-5RitpUDBGV+nRx7j4z1jz+zhjvT9ZzdJsKezr9m+95juR3bXi64lKDVlJ4X+1+itQ7lkWerJDe+1hLXmO2sW1w==}
     dev: false
 
   /@img/sharp-darwin-arm64@0.33.3:
